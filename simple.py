@@ -9,12 +9,14 @@ def print_grid():
     print ("|" + grid[6] + "|" + grid[7] + "|" + grid[8] + "|")
     print ("-" * 7)
 
+# Check if any of the winning lines are the same marker
 def game_won():
     if line_same(0,1,2) or line_same(3,4,5) or line_same(6,7,8) \
         or line_same(0,3,6) or line_same(1,4,7) or line_same(2,5,8) \
         or line_same(0,4,8) or line_same(2,4,6):                   
         return True
-        
+
+# Check if 3 grid spaces are the same marker        
 def line_same(space1, space2, space3):
     return grid[space1] == grid[space2] == grid[space3]
 
